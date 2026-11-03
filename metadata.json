@@ -1,0 +1,10 @@
+{
+  "name": "LiveVoice AI - Real-Time Multilingual Voice Assistant",
+  "description": "Real-time multilingual voice AI assistant featuring live speech recognition, natural conversational replies, expressive animated bot face, and automatic spoken answers in Malayalam, English, Hindi, Tamil, and Manglish.",
+  "requestFramePermissions": [
+    "microphone"
+  ],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

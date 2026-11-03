@@ -1,0 +1,86 @@
+@import "tailwindcss";
+
+@layer base {
+  body {
+    background-color: #040811;
+    color: #e2e8f0;
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+    overflow-x: hidden;
+  }
+}
+
+@keyframes pulseGlow {
+  0%, 100% {
+    box-shadow: 0 0 30px rgba(6, 214, 235, 0.45), inset 0 0 15px rgba(6, 214, 235, 0.2);
+  }
+  50% {
+    box-shadow: 0 0 50px rgba(6, 214, 235, 0.7), inset 0 0 25px rgba(6, 214, 235, 0.35);
+  }
+}
+
+@keyframes speakingMouth {
+  0%, 100% {
+    transform: scaleX(1) scaleY(1);
+    opacity: 0.8;
+  }
+  30% {
+    transform: scaleX(1.4) scaleY(2.8);
+    opacity: 1;
+  }
+  60% {
+    transform: scaleX(0.8) scaleY(1.5);
+    opacity: 0.9;
+  }
+  80% {
+    transform: scaleX(1.2) scaleY(2.2);
+    opacity: 1;
+  }
+}
+
+@keyframes eyeBlink {
+  0%, 94%, 98%, 100% {
+    transform: scaleY(1);
+  }
+  96% {
+    transform: scaleY(0.1);
+  }
+}
+
+.bot-screen-glow {
+  box-shadow: 0 0 45px rgba(6, 214, 235, 0.45), 0 0 85px rgba(6, 214, 235, 0.15), inset 0 0 20px rgba(6, 214, 235, 0.25);
+}
+
+.bot-screen-active-glow {
+  box-shadow: 0 0 55px rgba(6, 214, 235, 0.65), 0 0 110px rgba(6, 214, 235, 0.25), inset 0 0 30px rgba(6, 214, 235, 0.35);
+}
+
+.cyan-btn-glow {
+  box-shadow: 0 0 35px rgba(0, 255, 235, 0.75), 0 0 70px rgba(0, 255, 235, 0.35);
+}
+
+.cyan-eye-glow {
+  box-shadow: 0 0 22px #22d3ee, 0 0 45px #06b6d4;
+}
+
+.mouth-speaking {
+  animation: speakingMouth 0.45s ease-in-out infinite;
+}
+
+.eye-blink-anim {
+  animation: eyeBlink 4s infinite;
+}
+
+/* Custom smooth scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: rgba(15, 23, 42, 0.6);
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(34, 211, 238, 0.3);
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(34, 211, 238, 0.6);
+}
